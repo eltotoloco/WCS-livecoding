@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const tShirt = {
+        name: "T-Shirt fun",
+        price: 19.99,
+        quantity: 10,
+      };
+      const jean = {
+        name: "Jean",
+        price: 19.99,
+        quantity: 10,
+      };
+
+      const shoes = {
+        name: "Basket",
+        price: 49.99,
+        quantity: 10,
+      };
+
+      const catalog = [tShirt, jean, shoes];
+
+      const cart = [];
+      const minPriceForFreeDelivery = 150;
+
+      let total = 0;
+      for (let i = 0; i < catalog.length; i++) {
+        let currentItem = catalog[i];
+        if (cart.length > 0) {
+          console.log("Votre panier actuel: " + total + "€");
+        }
+        let quantity = parseInt(
+          prompt(
+            `Combien voulez vous de ${currentItem.name} (${currentItem.price}€) ?`
+          )
+        );
+        
+        if (quantity > currentItem.quantity) {
+          console.log("Pas assez de stock");
+        } else {
+          let purchase = {
+            item: currentItem,
+            quantity: quantity,
+          };
+          console.log(purchase);
+          total = total + purchase.quantity * purchase.item.price;
+          cart.push(purchase);
+          currentItem.quantity -= quantity;
+        }
+      }
+
+      if (total > minPriceForFreeDelivery) {
+        console.log("La livraison est offerte");
+      } else {
+        console.log("Des frais de livraison s'appliquent");
+      }
+    </script>
+  </body>
+</html>
