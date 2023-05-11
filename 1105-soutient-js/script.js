@@ -69,11 +69,15 @@ const filter = function(data, property, value, callback){
     return filteredMovies;
 }
 const sortAlpha = function(data){
-    return data.sort((a,b)=> a.title.localeCompare(b.title));
-    // return data.sort((a,b)=> a.year<b.year);
+    data.sort((a,b)=> a.title.localeCompare(b.title)); // le return n'est pas nécessaire car la fonction .sort() modifie le tableau directement
 }
-const actionMovies = filter(data,"category","Action", sortAlpha);
-console.log(actionMovies);
+const sortYear = function(data){
+    data.sort((a,b)=> a.year<b.year)
+}
+const actionMoviesByTitle = filter(data,"category","Action", sortAlpha);
+const actionMoviesByYear = filter(data,"category","Action", sortYear);
+console.log(actionMoviesByTitle);
+console.log(actionMoviesByYear);
 // const year97 = filterYear(1997);
 // console.log(year97);
 
