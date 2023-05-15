@@ -1,0 +1,20 @@
+#block1{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#block2{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+#block3{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+#block4{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
