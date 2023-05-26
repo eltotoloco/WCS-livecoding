@@ -148,19 +148,7 @@ const workshops = new Map();
 workshops.set("recipe", recipeWs);
 
 
-document.querySelectorAll('.hint-toggle').forEach(function(toggle) {
-  toggle.addEventListener('click', function(e) {
-    e.preventDefault();
-    var hints = this.parentElement.querySelectorAll('.task-hint');
-    hints.forEach(function(hint) {
-      if (hint.style.display === "none") {
-        hint.style.display = "block";
-      } else {
-        hint.style.display = "none";
-      }
-    });
-  });
-});
+
 
 
 function loadWorkshop(workshopName) {
@@ -193,7 +181,20 @@ function loadWorkshop(workshopName) {
       </div>`
     div.classList.add("task");
     taskList.appendChild(div);
-  })
+  });
+  document.querySelectorAll('.hint-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      var hints = this.parentElement.querySelectorAll('.task-hint');
+      hints.forEach(function(hint) {
+        if (hint.style.display === "none") {
+          hint.style.display = "block";
+        } else {
+          hint.style.display = "none";
+        }
+      });
+    });
+  });
   
   // Here, you would also load the tasks for the selected workshop into the #tasks section...
 }
