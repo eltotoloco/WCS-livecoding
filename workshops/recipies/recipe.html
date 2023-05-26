@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Finder</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="recipeStyle.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Recipe Finder</h1>
+    </header>
+   
+    <section class="filter-container">
+    
+    </section>
+    <section id="recipes">
+      <div class="recipe-card">
+        <img
+          src="http://via.placeholder.com/320x180"
+          alt="Sample Recipe Image"
+        />
+        <h2 class="recipe-title">Spaghetti Carbonara</h2>
+        <div class="recipe-cuisine">
+          <i class="fas fa-globe"></i>
+          <span>Italian</span>
+        </div>
+        <div class="recipe-time">
+          <i class="fas fa-clock"></i>
+          <span>${recipe.prepTimeInMin} min</span>
+        </div>
+        <p class="recipe-description">
+          A classic Italian pasta dish made with eggs, cheese, pancetta, and
+          pepper.
+        </p>
+       
+      </div>
+      <!-- Recipe cards will be inserted here -->
+    </section>
+    <script src="recipe.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript workshops</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  
+  <body>
+    <header>
+      <div class="header-container">
+        
+        <h1>JavaScript Workshops</h1>
+        <p>Apply your JavaScript skills</p>
+      </div>
+    </header>
+    <main>
+      <section id="workshop-list">
+        <ul>
+          <li><a onclick="loadWorkshop('recipe')">Recipes</a></li>
+          <li><a onclick="loadWorkshop('room-booking')">Room Booking</a></li>
+        </ul>
+      </section>
+      <aside id="workshop-info">
+        <div id="recipe-info" style="display: none;">
+          <h2>Recipes Workshop</h2>
+          <p>A brief description of the Recipes workshop...</p>
+          <a href="/recipies/recipe.html" target="_blank">Work on this workshop</a>
+          <a href="/recipies/recipe-final.html" target="_blank">See final result</a>
+        </div>
+        <div id="room-booking-info" style="display: none;">
+          <h2>Room Booking Workshop</h2>
+          <p>A brief description of the Room Booking workshop...</p>
+          <a href="room-booking.html">Work on this workshop</a>
+          <a href="room-booking-final.html">See final result</a>
+        </div>
+      </aside>
+      <section id="tasks">
+        <!-- The tasks for the selected workshop will go here -->
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+  
+</html>

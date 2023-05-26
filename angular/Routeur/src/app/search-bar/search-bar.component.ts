@@ -12,9 +12,6 @@ export class SearchBarComponent {
 
   }
   navigate(){
-    if(this.name === "bob"){
-      this.router.navigate(['/bob/']);
-    }
     this.router.navigate(['/wcs/', this.name]);
   }
 }
